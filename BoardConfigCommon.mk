@@ -144,7 +144,7 @@ PROTOBUF_SUPPORTED := true
 
 # Media
 TARGET_QCOM_MEDIA_VARIANT := caf
-#TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Display
 BOARD_EGL_CFG := device/samsung/j5-common/configs/egl.cfg
