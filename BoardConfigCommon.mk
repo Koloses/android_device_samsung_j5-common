@@ -121,11 +121,11 @@ BOARD_VOLD_MAX_PARTITIONS := 65
 # Camera
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 # Reference for Gralloc. In case the above do not work, we try those too.
 #TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 #TARGET_USE_COMPAT_GRALLOC_PERFORM := true
 #BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
-#TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 #TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # Workaround to avoid issues with legacy liblights on QCOM platforms
