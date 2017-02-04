@@ -72,8 +72,20 @@ on property:dev.bootcomplete=1
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 50000
     write /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor 50000
 
+    write /sys/module/msm_thermal/core_control/enabled 1
+
     #gpu and hotplug
     write /sys/devices/soc.0/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 200000000
     write /sys/kernel/msm_mpdecision/conf/max_cpus_online 4
     write /sys/kernel/msm_mpdecision/conf/delay 64
     write /sys/devices/soc.0/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/min_pwrlevel 6
+
+    #cpuset test changes
+    write /dev/cpuset/foreground/cpus 1-2
+    write /dev/cpuset/foreground/boost/cpus 1-3
+    write /dev/cpuset/background/cpus 2-3
+    write /dev/cpuset/system-background/cpus 2-3
+    write /dev/cpuset/top-app/cpus 0-3
+
+    #memory opts
+    write /sys/block/mmcblk0/queue/add_random 0
