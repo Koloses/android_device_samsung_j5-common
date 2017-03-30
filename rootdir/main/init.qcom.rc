@@ -408,6 +408,10 @@ on boot
     # Start qcamerasvr
     start qcamerasvr
 
+    insmod /system/lib/modules/cifs.ko
+    insmod /system/lib/modules/tcp_westwood.ko
+    insmod /system/lib/modules/tcp_htcp.ko
+
 # msm specific files that need to be created on /data
 on post-fs-data
     # Create directory for TZ Apps
